@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سامانه مدیریت صف ال‌پِی‌جی - طوفان ترابر آسیا</title>
+    <title>مدیریت نوبت‌دهی بارگیری گاز LPG - طوفان ترابر آسیا</title>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -37,7 +37,7 @@
             justify-content: center;
             min-height: 85vh;
             text-align: center;
-            gap: 25px;
+            gap: 20px;
             padding: 15px;
             background: radial-gradient(circle at center, #1e293b 0%, #04060d 100%);
             border-radius: 12px;
@@ -47,19 +47,19 @@
             background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
             border: 2px solid rgba(56, 189, 248, 0.6);
             border-radius: 20px;
-            padding: 25px;
+            padding: 20px;
             box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
-        .home-logo-text { font-family: monospace; font-weight: 900; font-size: 2.5rem; color: #ffffff; letter-spacing: 3px; line-height: 1; }
-        .home-logo-sub { font-size: 1rem; color: #93c5fd; font-weight: 800; letter-spacing: 1px; }
+        .home-logo-text { font-family: monospace; font-weight: 900; font-size: 2.2rem; color: #ffffff; letter-spacing: 3px; line-height: 1; }
+        .home-logo-sub { font-size: 0.9rem; color: #93c5fd; font-weight: 800; letter-spacing: 1px; }
 
         .home-title {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 900;
             color: var(--accent-blue);
             margin: 0;
@@ -69,7 +69,7 @@
         .menu-buttons {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
             width: 100%;
             max-width: 350px;
         }
@@ -78,10 +78,10 @@
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             border: 2px solid var(--accent-blue);
             color: var(--text-primary);
-            padding: 16px;
+            padding: 14px;
             border-radius: 14px;
             font-family: 'Vazirmatn', sans-serif;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 800;
             cursor: pointer;
             box-shadow: 0 4px 12px rgba(0,0,0,0.5);
@@ -95,6 +95,34 @@
 
         .menu-btn.green {
             border-color: var(--accent-green);
+        }
+
+        /* باکس‌های توضیحات صفحه اصلی */
+        .home-desc-box {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            max-width: 350px;
+            text-align: right;
+            line-height: 1.5;
+        }
+
+        .home-desc-box.green {
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        .home-desc-title {
+            font-weight: 900;
+            color: var(--accent-blue);
+            margin-bottom: 3px;
+            display: block;
+        }
+
+        .home-desc-box.green .home-desc-title {
+            color: var(--accent-green);
         }
 
         /* هدر صفحات داخلی */
@@ -122,7 +150,7 @@
         }
 
         .header-title-sm {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 950;
             color: var(--accent-blue);
             margin: 0;
@@ -155,12 +183,12 @@
         .card {
             background: rgba(15, 23, 42, 0.9);
             border-radius: 8px;
-            padding: 6px 8px;
+            padding: 8px 10px;
             margin-bottom: 6px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 5px;
         }
 
         /* کارت منتظر بار: حاشیه نارنجی و نوار ضخیم در سمت راست */
@@ -184,37 +212,39 @@
         .driver-info {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
+        /* فونت بزرگتر برای شماره ردیف */
         .row-number {
             background: rgba(255, 255, 255, 0.08);
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
             font-weight: 900;
             color: var(--accent-yellow);
-            font-size: 0.7rem;
+            font-size: 0.85rem;
         }
 
         .driver-name {
             color: var(--text-primary);
             font-weight: 800;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
 
+        /* فونت بزرگتر برای پلاک */
         .plate-box {
             background: #090d16;
             border: 1px solid rgba(251, 191, 36, 0.5);
-            padding: 1px 5px;
+            padding: 2px 8px;
             border-radius: 4px;
             font-family: monospace;
             font-weight: 900;
             color: #fbbf24;
-            font-size: 0.75rem;
+            font-size: 0.9rem;
         }
 
         .card-info-grid {
@@ -222,31 +252,33 @@
             justify-content: space-between;
             align-items: center;
             background: rgba(0, 0, 0, 0.2);
-            padding: 3px 6px;
+            padding: 4px 8px;
             border-radius: 4px;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
         }
 
         .info-group {
             display: flex;
-            gap: 4px;
+            gap: 6px;
             align-items: center;
         }
 
         .info-label {
             color: var(--text-secondary);
-            font-size: 0.6rem;
+            font-size: 0.7rem;
         }
 
+        /* فونت بزرگتر برای تاریخ و ساعت */
         .info-val {
             color: var(--text-primary);
-            font-weight: 700;
+            font-weight: 800;
+            font-size: 0.8rem;
         }
 
         .badge {
-            padding: 2px 6px;
+            padding: 2px 8px;
             border-radius: 10px;
-            font-size: 0.6rem;
+            font-size: 0.7rem;
             font-weight: 800;
         }
         .badge.waiting { background: rgba(245, 158, 11, 0.2); color: #fcd34d; border: 1px solid #f59e0b; }
@@ -265,15 +297,28 @@
                 <span class="home-logo-text">TTA</span>
                 <span class="home-logo-sub">طوفان ترابر آسیا</span>
             </div>
-            <h1 class="home-title">سامانه مدیریت صف ال‌پِی‌جی</h1>
+            <h1 class="home-title">مدیریت نوبت‌دهی بارگیری گاز LPG</h1>
             
             <div class="menu-buttons">
-                <button class="menu-btn" onclick="showSection('main')">
-                    🚛 لیست بونکرهای ایرانی منتظر بار
-                </button>
-                <button class="menu-btn green" onclick="showSection('iraqi')">
-                    🚛 لیست بونکرهای عراقی بارگیری شده
-                </button>
+                <div>
+                    <button class="menu-btn" onclick="showSection('main')" style="width: 100%;">
+                        🚛 لیست بونکرهای ایرانی منتظر بار
+                    </button>
+                    <div class="home-desc-box" style="margin-top: 6px; width: 100%; box-sizing: border-box;">
+                        <span class="home-desc-title">راهنمای بخش ایرانی:</span>
+                        نوبت‌دهی کشنده‌ها طبق اولویت‌بندی با شماره مشخص شده و بر اساس قبض ورود به پارکینگ می‌باشد و تاریخ و ساعت ورود ثبت شده.
+                    </div>
+                </div>
+
+                <div>
+                    <button class="menu-btn green" onclick="showSection('iraqi')" style="width: 100%;">
+                        🚛 لیست بونکرهای عراقی بارگیری شده
+                    </button>
+                    <div class="home-desc-box green" style="margin-top: 6px; width: 100%; box-sizing: border-box;">
+                        <span class="home-desc-title">راهنمای بخش عراقی:</span>
+                        لیست کل کشنده‌های عراقی طبق جدول می‌باشد و هر کشنده عراقی که بار بزند و پشت مرز باشد مشخص شده و تاریخ ورود آن در جدول ذکر شده است.
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -485,3 +530,4 @@
     </script>
 </body>
 </html>
+
